@@ -6,8 +6,8 @@ const app = express();
 const PORT = 3000;
 
 // middleware
-app.use( bodyParser.json() );
-app.use(express.static(path.join(__dirname, '../client/public')));
+app.use('/products/:id', bodyParser.json() );
+app.use('/products/:id', express.static(path.join(__dirname, '../client/public')));
 
 // routes
 app.get('/', function (req, res) {
