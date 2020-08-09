@@ -7,7 +7,7 @@ var seed = (numOfEntries) => {
       console.log(err);
     } else {
       if (docs.length > 0) {
-        console.log('The database is already populated.');
+        console.log(`The database is already populated with ${docs.length} documents.`);
         return;
       } else {
         let product1Images = ["https://recommendedproductspictures.s3-us-west-1.amazonaws.com/product1/rp1.jpg", "https://recommendedproductspictures.s3-us-west-1.amazonaws.com/product1/rp2.jpg", "https://recommendedproductspictures.s3-us-west-1.amazonaws.com/product1/rp3.jpg", "https://recommendedproductspictures.s3-us-west-1.amazonaws.com/product1/rp4.jpg", "https://recommendedproductspictures.s3-us-west-1.amazonaws.com/product1/rp5.jpg", "https://recommendedproductspictures.s3-us-west-1.amazonaws.com/product1/rp6.jpg"];
@@ -21,7 +21,7 @@ var seed = (numOfEntries) => {
         let imageUrls = [product1Images, product2Images, product3Images, product4Images];
 
         // setting to be 10 while testing. change to 100 later.
-        const quantity = 10;
+        const quantity = numOfEntries;
         let products = [];
         for (let i = 0; i < quantity; i++) {
           products.push(
@@ -86,6 +86,4 @@ var seed = (numOfEntries) => {
   });
 }
 
-// clear database before adding new products
-// await Product.remove()
-seed();
+seed(100);
