@@ -20,6 +20,7 @@
     "express": "^4.15.0",
     "jquery": "^3.1.1",
     "mongoose": "^4.9.6",
+    "faker": "^4.1.0",
     "nodemon": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -29,8 +30,10 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "faker": "^4.1.0",
+    "eslint-plugin-import": "^2.22.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
