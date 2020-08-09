@@ -10,8 +10,16 @@ app.use( bodyParser.json() );
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 // routes
+app.get('/', function (req, res) {
+  res.status(200).send('This is the homepage.');
+})
+
 app.get('/products', function (req, res) {
-  res.send('GET request to products')
+  res.status(200).send('This is the products page.');
+})
+
+app.get('/products/:id', function (req, res) {
+  res.send(`You requested to see a product with the id of ` + req.params.id);
 })
 
 // start the server
