@@ -12,7 +12,9 @@
     "start": "webpack-dev-server --open --mode development",
     "server-dev": "nodemon server/index.js",
     "build": "webpack --mode production",
-    "seed": "node ./database/seed.js"
+    "seed": "node ./database/seed.js",
+    "eslinter" : "eslint '**/*.js' --ignore-pattern node_modules/",
+    "lint": "eslint --fix --ext .js,.jsx . --ignore-pattern bundle.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
