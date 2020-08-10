@@ -1,14 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/app.jsx';
 
-var Template = () => (
-  <div>
-    <div>
-      Hello from react!
-    </div>
-    <img src="../public/makeyousshungry.jpg" alt="Girl in a jacket" />
-
-  </div>
-)
-
-ReactDOM.render(<Template />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
