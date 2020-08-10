@@ -1,13 +1,30 @@
 // import dependencies
+// import { trialMethod} from "../client/src/index.jsx";
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 const PORT = 3000;
+var currentId;
+
+
+// sets currentId to the id of the url typed in the browser.
+const setProductID = (req, res, next) => {
+  // console.log(req.params.id);
+  currentId = req.params.id;
+  console.log(currentId);
+  next();
+};
 
 // middleware
 app.use('/products/:id', bodyParser.json() );
 app.use('/products/:id', express.static(path.join(__dirname, '../client/public')));
+app.use('/products/:id', setProductID);
+
+// app.use(bodyParser.json() );
+// app.use(express.static(path.join(__dirname, '../client/public')));
+
 
 // routes
 app.get('/', function (req, res) {
@@ -18,8 +35,15 @@ app.get('/products', function (req, res) {
   res.status(200).send('This is the products page.');
 })
 
-app.get('/products/:id', function (req, res) {
-  res.send(`You requested to see a product with the id of ` + req.params.id);
+// app.get('/products/:id', function (req, res) {
+//   currentId = req.params.id;
+//   console.log(currentId);
+//   res.status(200).send(`You requested to see a product with the id of ` + req.params.id);
+// })
+
+app.get('/data/products', function (req, res) {
+  console.log(currentId);
+  res.status(200).send(currentId);
 })
 
 // start the server
