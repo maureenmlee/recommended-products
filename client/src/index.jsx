@@ -8,7 +8,7 @@ class App extends React.Component {
     this.state = {
       recommendProductImages: []
     }
-    // this.getOneProduct = this.getOneProduct.bind(this);
+    this.getOneProduct = this.getOneProduct.bind(this);
   }
 
   // {
@@ -18,16 +18,16 @@ class App extends React.Component {
   //     this.setState({recommendProductImages: data});
   //   }
 
-  // componentDidMount() {
-  //   console.log("GOT HERES")
-  //   this.getOneProduct();
-  // }
+  componentDidMount() {
+    console.log("GOT HERES")
+    this.getOneProduct();
+  }
 
-  // getOneProduct() {
-  //   axios.get('/data/products')
-  //     .then((data) => {console.log(data)})
-  //     .catch(console.log)
-  // }
+  getOneProduct() {
+    axios.get('/data/products')
+      .then((data) => {console.log(data.data)})
+      .catch(console.log)
+  }
 
 
   // , (err, data) => {
