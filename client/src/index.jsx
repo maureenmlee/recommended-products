@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recommendProductImages: []
+      recommendedProductData: []
     }
     this.getOneProduct = this.getOneProduct.bind(this);
   }
@@ -19,24 +19,14 @@ class App extends React.Component {
   //   }
 
   componentDidMount() {
-    console.log("GOT HERES")
     this.getOneProduct();
   }
 
   getOneProduct() {
     axios.get('/data/products')
-      .then((data) => {console.log(data.data)})
+      .then((data) => {this.setState({recommendedProductData: data.data})})
       .catch(console.log)
   }
-
-
-  // , (err, data) => {
-  //   if (err) {
-  //     console.log(err);
-  //   } else {
-  //     console.log("success");
-  //   }
-  // })
 
   render() {
     return (
