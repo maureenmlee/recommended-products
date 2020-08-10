@@ -18,7 +18,7 @@ class App extends React.Component {
 
   getOneProduct() {
     axios.get('/data/products')
-      .then((data) => {this.setState({recommendedProductsData: data.data})})
+      .then((data) => {this.setState({recommendedProductsData: data.data[0].recommendedProducts})})
       .catch(console.log)
   }
 
