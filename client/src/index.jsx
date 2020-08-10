@@ -8,7 +8,7 @@ class App extends React.Component {
     this.state = {
       recommendProductImages: []
     }
-    this.getOneProduct = this.getOneProduct.bind(this);
+    // this.getOneProduct = this.getOneProduct.bind(this);
   }
 
   // {
@@ -18,19 +18,25 @@ class App extends React.Component {
   //     this.setState({recommendProductImages: data});
   //   }
 
-  trialMethod() {
-    console.log("working");
-  }
+  // componentDidMount() {
+  //   console.log("GOT HERES")
+  //   this.getOneProduct();
+  // }
 
-  getOneProduct(id) {
-    axios.get(`/products/data`, (err, data) => {
-      if (err) {
-        console.log(err);
-      } else {
-        callback()
-      }
-    })
-  }
+  // getOneProduct() {
+  //   axios.get('/data/products')
+  //     .then((data) => {console.log(data)})
+  //     .catch(console.log)
+  // }
+
+
+  // , (err, data) => {
+  //   if (err) {
+  //     console.log(err);
+  //   } else {
+  //     console.log("success");
+  //   }
+  // })
 
   render() {
     return (
@@ -43,26 +49,6 @@ class App extends React.Component {
       </div>
     )
   }
-
 }
 
-// var Template = () => (
-//   <div>
-//     <div>
-//       Hello from react!
-//     </div>
-
-//   </div>
-// )
-
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// module.exports = getOneProduct;
-
-// export default App;
-
-
-// module.export = {
-//   trialMethod: App.getData,
-//   setter: instanceOfCollection.setData,
-//  }

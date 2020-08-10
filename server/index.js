@@ -11,16 +11,17 @@ var currentId;
 
 // sets currentId to the id of the url typed in the browser.
 const setProductID = (req, res, next) => {
-  // console.log(req.params.id);
+  console.log(req.params.id);
+  // console.log("got here!! ");
   currentId = req.params.id;
-  console.log(currentId);
   next();
 };
 
 // middleware
+app.use('/products/:id', setProductID);
 app.use('/products/:id', bodyParser.json() );
 app.use('/products/:id', express.static(path.join(__dirname, '../client/public')));
-app.use('/products/:id', setProductID);
+// app.use('/products/:id', setProductID);
 
 // app.use(bodyParser.json() );
 // app.use(express.static(path.join(__dirname, '../client/public')));
@@ -42,7 +43,7 @@ app.get('/products', function (req, res) {
 // })
 
 app.get('/data/products', function (req, res) {
-  console.log(currentId);
+  // console.log(currentId);
   res.status(200).send(currentId);
 })
 
