@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RecommendedProducts from './recommendedProducts.jsx';
 const axios = require('axios');
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recommendedProductData: []
+      recommendedProductsData: []
     }
     this.getOneProduct = this.getOneProduct.bind(this);
   }
@@ -17,7 +18,7 @@ class App extends React.Component {
 
   getOneProduct() {
     axios.get('/data/products')
-      .then((data) => {this.setState({recommendedProductData: data.data})})
+      .then((data) => {this.setState({recommendedProductsData: data.data})})
       .catch(console.log)
   }
 
@@ -27,7 +28,7 @@ class App extends React.Component {
         <div>
           Hello from react!
         </div>
-        {/* <img src="https://trialharrison.s3-us-west-1.amazonaws.com/il_340x270.1202729343_jxxe.jpg" /> */}
+        <RecommendedProducts recommendedProductsData={this.state.recommendedProductsData}/>
 
       </div>
     )
