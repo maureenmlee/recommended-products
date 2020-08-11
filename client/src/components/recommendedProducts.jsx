@@ -11,5 +11,3 @@ var RecommendedProducts = (props) => (
 
 export default RecommendedProducts;
 
- {/* <img src="https://trialharrison.s3-us-west-1.amazonaws.com/il_340x270.1202729343_jxxe.jpg" /> */}
-     // {props.recommendedProductsData.length > 0 ? props.recommendedProductsData[0].image : ""}
