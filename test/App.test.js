@@ -17,7 +17,7 @@ describe('<App/>', () => {
     expect(wrapper).toBeDefined();
   })
 
-  make sure App contains RecommendedProducts component
+  // make sure App contains RecommendedProducts component
   it('should have <RecommendedProducts /> as a subcomponent', () => {
     expect(wrapper.containsMatchingElement(<RecommendedProducts />)).toEqual(true);
   })
