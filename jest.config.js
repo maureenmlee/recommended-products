@@ -3,5 +3,5 @@ module.exports = {
     '<rootDir>/test/setupTests.js',
   ],
   
-  transformIgnorePatterns: [`/node_modules/`]
+  transformIgnorePatterns: [`/node_modules/enzyme`]
 };
