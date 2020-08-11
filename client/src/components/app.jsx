@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RecommendedProducts from './recommendedProducts.jsx';
+import RecommendedProducts from './RecommendedProducts.jsx';
 const axios = require('axios');
 
 class App extends React.Component {

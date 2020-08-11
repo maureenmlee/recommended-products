@@ -1,6 +1,7 @@
 node_modules
 .babelrc
 .eslintrc.js
+coverage
 
 # misc
 .DS_Store
