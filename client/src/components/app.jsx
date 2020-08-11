@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RecommendedProducts from './RecommendedProducts.jsx';
+import RecommendedProducts from './recommendedProducts.jsx';
 
 const axios = require('axios');
 
