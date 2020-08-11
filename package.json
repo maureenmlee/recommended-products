@@ -45,6 +45,7 @@
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.22.0",
     "jest": "^23.6.0",
+    "react-test-renderer": "^16.13.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
