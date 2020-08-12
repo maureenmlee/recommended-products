@@ -1,5 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Grid, Row, Col } from '../gridRowCol.js';
+
+
+
 
 let RecommendedProducts = (props) => (
   <div>
