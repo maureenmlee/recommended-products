@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RecommendedProducts from './recommendedProducts.jsx';
 import Header from './header.jsx';
+import styled from 'styled-components';
 
 const axios = require('axios');
 // productId: window.location.pathname.match(/(\d+)/)[0],
