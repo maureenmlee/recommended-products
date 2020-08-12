@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import App from '../client/src/components/app.jsx';
+import Header from '../client/src/components/header.jsx';
 import RecommendedProducts from '../client/src/components/recommendedProducts.jsx';
 
 // component testing
@@ -16,6 +17,11 @@ describe('<App/>', () => {
   // make sure App renders
   it('should exist', () => {
     expect(wrapper).toBeDefined();
+  })
+
+  // make sure App contains Header component
+  it('should have <Header /> as a subcomponent', () => {
+    expect(wrapper.containsMatchingElement(<Header />)).toEqual(true);
   })
 
   // make sure App contains RecommendedProducts component
