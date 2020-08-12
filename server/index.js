@@ -6,17 +6,8 @@ const db = require('../database/database.js');
 const app = express();
 const PORT = 3000;
 
-// storing the id that was specified in the url parameter in the browser.
-var currentId;
-
-// sets currentId to the id of the url typed in the browser.
-const setProductID = (req, res, next) => {
-  currentId = req.params.id;
-  next();
-};
 
 // middleware
-app.use('/products/:id', setProductID);
 app.use('/products/:id', bodyParser.json() );
 app.use('/products/:id', express.static(path.join(__dirname, '../client/public')));
 
@@ -29,9 +20,11 @@ app.get('/products', function (req, res) {
   res.status(200).send('This is the products page.');
 })
 
+// type localhost3000/products/3 in the browser
+
 // retrieves the recommendedProducts data for the product with the currentId.
-app.get('/data/products', function (req, res) {
-  db.getRecommendedProductsData(currentId, (err, data) => {
+app.get('/data/:id', function (req, res) {
+  db.getRecommendedProductsData(req.params.id, (err, data) => {
     if (err) {
       res.status(500).send('Could not retrieve recommended product data.');
     } else {
