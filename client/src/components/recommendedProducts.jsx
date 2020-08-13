@@ -26,9 +26,3 @@ let RecommendedProducts = (props) => (
 )
 
 export default RecommendedProducts;
-
-
-// what i had in the return before creating product component:
-  {/* <div>
-    <img src={product.image} width="256"/>
-  </div> */}
