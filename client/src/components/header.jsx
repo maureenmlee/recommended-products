@@ -19,10 +19,10 @@ const YouMay = styled.div`
   text-align: left;
   letter-spacing: 0px;
   line-height: 36px;
-  font-family: Andale Mono, monospace
+  font-family: Andale Mono, monospace;
+  font-weight: 100;
   word-spacing: 0em;
   font-weight: 100;
-  background-color: yellow;
 `;
 
 const ShopMore = styled.div`
@@ -33,11 +33,9 @@ const ShopMore = styled.div`
   line-height: 18px;
   font-family: Optima, sans-serif;
   font-weight: 100;
-  background-color: green;
 `;
 
 const Svg = styled.svg`
-  background-color: red;
   padding: 0;
   margin: 0;
   width: 25px;
