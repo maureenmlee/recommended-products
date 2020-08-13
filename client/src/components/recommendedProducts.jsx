@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Product from './product.jsx';
 import styled from 'styled-components'
 import { Grid, Row, Col } from '../gridRowCol.js';
 
@@ -18,9 +19,7 @@ let RecommendedProducts = (props) => (
   <RecProGrid>
     {props.recommendedProductsData.map((product) => {
       return (
-        <div>
-          <img src={product.image} width="256"/>
-        </div>
+        <Product product={product}/>
       )
     })}
   </RecProGrid>
@@ -34,3 +33,8 @@ export default RecommendedProducts;
   return <img src={product.image} />
 })}
 </div> */}
+
+// what i had in the return before creating product component:
+  {/* <div>
+    <img src={product.image} width="256"/>
+  </div> */}
