@@ -5,23 +5,25 @@ import { Grid, Row, Col } from '../gridRowCol.js';
 
 // build on top of styled components
 // A new component based on Col, but with some override styles
-const RecProCol = styled(Col)`
-
+const RecProGrid = styled(Col)`
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+  margin-left: 50px;
+  margin-right: 30px;
 `;
 
+// replace the div below with a new react component later
 let RecommendedProducts = (props) => (
-  <Grid>
-    <Row>
-      {props.recommendedProductsData.map((product) => {
-        return (
-          <RecProCol size={1}>
-            <img src={product.image} />
-          </RecProCol>
-        )
-      })}
-    </Row>
-
-  </Grid>
+  <RecProGrid>
+    {props.recommendedProductsData.map((product) => {
+      return (
+        <div>
+          <img src={product.image} width="256"/>
+        </div>
+      )
+    })}
+  </RecProGrid>
 
 )
 
