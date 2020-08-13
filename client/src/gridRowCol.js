@@ -10,4 +10,5 @@ export const Row = styled.div`
 
 export const Col = styled.div`
   flex: ${(props) => props.size};
+
 `;
