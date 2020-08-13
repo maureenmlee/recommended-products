@@ -23,16 +23,10 @@ let RecommendedProducts = (props) => (
       )
     })}
   </RecProGrid>
-
 )
 
 export default RecommendedProducts;
 
-{/* <div>
-{props.recommendedProductsData.map((product) => {
-  return <img src={product.image} />
-})}
-</div> */}
 
 // what i had in the return before creating product component:
   {/* <div>
