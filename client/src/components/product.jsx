@@ -3,20 +3,11 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components'
 import { Grid, Row, Col } from '../gridRowCol.js';
 
-// &:hover {
-//   filter = ' brightness(80%)';
-//   transition = '.5s';
-// }
-// background: red;
-
-
 const ProductGrid = styled(Grid)`
-  border-style: solid;
-  border-color:red;
   &:hover {
-
-    opacity: 0.3;
-    transition: '2s';
+    padding: 10px;
+    box-shadow: 0px 0px 4px 4px rgba(34, 34, 34, 0.075);
+    border-width: thin;
   }
 `;
 
@@ -52,25 +43,11 @@ const ProductPriceStyle = styled.div`
 class Product extends React.Component {
   constructor(props) {
     super(props);
-    // this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this);
-    // this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
   }
 
-  // onMouseEnterHandler = (e) => {
-  //   e.target.style.filter = ' brightness(80%)';
-  //   e.target.style.transition = '.5s';
-  // }
-
-  // onMouseLeaveHandler = (e) => {
-  //   e.target.style.filter = 'none';
-  // }
-
-
-  //onMouseEnter={this.onMouseEnterHandler}
-  //onMouseLeave={this.onMouseLeaveHandler}
   render() {
     return (
-      <ProductGrid   >
+      <ProductGrid  >
         <img src={this.props.product.image} width="256"/>
         <ProductNameStyle>
           {this.props.product.productName}
@@ -84,11 +61,6 @@ class Product extends React.Component {
       </ProductGrid>
     )
   }
-
 }
-
-
-// let Product = (props) => (
-// )
 
 export default Product;
