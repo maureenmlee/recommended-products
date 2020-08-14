@@ -20,8 +20,6 @@ app.get('/products', (req, res) => {
   res.status(200).send('This is the products page.');
 });
 
-// type localhost3000/products/3 in the browser
-
 // retrieves the recommendedProducts data for the product with the currentId.
 app.get('/data/:id', (req, res) => {
   db.getRecommendedProductsData(req.params.id, (err, data) => {

@@ -40,13 +40,4 @@ describe('<App/>', () => {
 
   });
 
-  // Ignore this test for now. Look into using nock library later for this.
-  // it('should retrieve data from db', () => {
-  //   // check if recommendedProductsData has correct data after receiving it from db
-  //   expect(wrapper.state('recommendedProductsData').length).toBe(0);
-  //   let appInstance = wrapper.instance();
-  //   appInstance.componentDidMount();
-  //   expect(wrapper.state('recommendedProductsData').length).not.toBe(0);
-  // })
-
 });

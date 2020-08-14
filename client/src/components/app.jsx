@@ -5,8 +5,6 @@ import Header from './header.jsx';
 import styled from 'styled-components';
 
 const axios = require('axios');
-// productId: window.location.pathname.match(/(\d+)/)[0],
-
 
 class App extends React.Component {
   constructor(props) {
@@ -34,7 +32,6 @@ class App extends React.Component {
       <div>
         <Header />
         <RecommendedProducts recommendedProductsData={this.state.recommendedProductsData}/>
-
       </div>
     )
   }

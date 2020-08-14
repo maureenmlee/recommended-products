@@ -4,8 +4,6 @@ import Product from './product.jsx';
 import styled from 'styled-components'
 import { Grid, Row, Col } from '../gridRowCol.js';
 
-// build on top of styled components
-// A new component based on Col, but with some override styles
 const RecProGrid = styled(Col)`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -14,7 +12,6 @@ const RecProGrid = styled(Col)`
   margin-right: 30px;
 `;
 
-// replace the div below with a new react component later
 let RecommendedProducts = (props) => (
   <RecProGrid>
     {props.recommendedProductsData.map((product) => {
