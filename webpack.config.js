@@ -22,7 +22,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".js", ".json", ".jsx", ".css"],
+    extensions: ['.js', '.json', '.jsx', '.css'],
   },
 
   devtool: 'cheap-module-eval-source-map',

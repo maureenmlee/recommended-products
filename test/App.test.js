@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import App from '../client/src/components/app.jsx';
+import Header from '../client/src/components/header.jsx';
 import RecommendedProducts from '../client/src/components/recommendedProducts.jsx';
 
 // component testing
@@ -18,6 +19,11 @@ describe('<App/>', () => {
     expect(wrapper).toBeDefined();
   })
 
+  // make sure App contains Header component
+  it('should have <Header /> as a subcomponent', () => {
+    expect(wrapper.containsMatchingElement(<Header />)).toEqual(true);
+  })
+
   // make sure App contains RecommendedProducts component
   it('should have <RecommendedProducts /> as a subcomponent', () => {
     expect(wrapper.containsMatchingElement(<RecommendedProducts />)).toEqual(true);
@@ -33,14 +39,5 @@ describe('<App/>', () => {
     expect(wrapper.state('recommendedProductsData').length).toBe(0);
 
   });
-
-  // Ignore this test for now. Look into using nock library later for this.
-  // it('should retrieve data from db', () => {
-  //   // check if recommendedProductsData has correct data after receiving it from db
-  //   expect(wrapper.state('recommendedProductsData').length).toBe(0);
-  //   let appInstance = wrapper.instance();
-  //   appInstance.componentDidMount();
-  //   expect(wrapper.state('recommendedProductsData').length).not.toBe(0);
-  // })
 
 });
